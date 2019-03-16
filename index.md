@@ -1,162 +1,84 @@
 ---
 layout: default
-MathJax: true
+title: Home
+nav_order: 1
+description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+permalink: /
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+# Focus on writing good documentation
+{: .fs-9 }
 
-[Link to another page](./another-page.html).
+Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+{: .fs-6 .fw-300 }
 
-There should be whitespace between paragraphs.
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+---
 
-# Header 1
+## Getting started
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+### Dependencies
 
-## Header 2
+Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub Pages' standard Jekyll compiler.
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+### Quick start: Use as a GitHub Pages remote theme
 
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
+1. Add Just the Docs to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
+```yaml
+remote_theme: pmarsceill/just-the-docs
 ```
+<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+### Local installation: Use the gem-based theme
+
+1. Install the Ruby Gem
+```bash
+$ gem install just-the-docs
 ```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
+```yaml
+# .. or add it to your your Jekyll site’s Gemfile
+gem "just-the-docs"
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+2. Add Just the Docs to your Jekyll site’s `_config.yml`
+```yaml
+theme: "just-the-docs"
 ```
-
+3. _Optional:_ Initialize search data (creates `search-data.json`)
+```bash
+$ bundle exec just-the-docs rake search:init
 ```
-The final element.
+3. Run you local Jekyll server
+```bash
+$ jekyll serve
 ```
+```bash
+# .. or if you're using a Gemfile (bundler)
+$ bundle exec jekyll serve
+```
+4. Point your web browser to [http://localhost:4000](http://localhost:4000)
 
-### Math Blocks
+### Configure Just the Docs
 
-$$
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-      y_1 \\
-      \vdots \\
-      y_n
-    \end{array} \right)
-\end{align*}
-$$
+- [See configuration options]({{ site.baseurl }}{% link docs/configuration.md %})
 
-# About this theme
+---
 
-* * *
+## About the project
 
-## Components used
+Just the Docs is &copy; 2017-2019 by [Patrick Marsceill](http://patrickmarsceill.com).
 
-- [jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)
-- [jQuery](https://jquery.com/)
-- [MathJax](https://www.mathjax.org/)
+### License
 
-## License
+Just the Docs is distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt).
 
-- [MIT LICENSE](LICENSE)
+### Contributing
 
-## Thanks
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/pmarsceill/just-the-docs#contributing).
 
-- [Drassil/git-wiki](https://github.com/Drassil/git-wiki)
-- [ghiculescu/jekyll-table-of-contents](https://github.com/ghiculescu/jekyll-table-of-contents)
+### Code of Conduct
+
+Just the Docs is committed to fostering a welcoming community.
+
+[View our Code of Conduct](https://github.com/pmarsceill/just-the-docs/tree/master/CODE_OF_CONDUCT.md) on our GitHub repository.
