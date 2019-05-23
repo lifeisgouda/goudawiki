@@ -1,12 +1,12 @@
 ---
 layout: default
-title: linux
+title: algorithms
 nav_order: 2
 has_children: true
-permalink: docs/linux
+permalink: docs/algorithms
 ---
 
-# Linux
+# Algorithms
 {: .no_toc }
-Linux에 대한 내용 정리
+알고리즘 문제 푼 것 또는 생각나는 알고리즘 구현한 것 기록
 {: .fs-6 .fw-300 }
