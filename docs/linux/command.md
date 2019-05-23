@@ -2,7 +2,7 @@
 layout: default
 title: Linux Command
 parent: linux
-nav_order: 3
+nav_order: 2
 ---
 
 # Linux Command
